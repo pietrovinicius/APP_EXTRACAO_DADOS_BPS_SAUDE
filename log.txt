@@ -1,0 +1,19 @@
+
+LOG agora: 09/11/2023 00:08:43
+Field txt e-mail: 09/11/2023 00:08:52
+Botao de Login send_keys("pietrovinicius@gmail.com"): 09/11/2023 00:08:54
+Botao Acessar ConsultaPublica de Login: 09/11/2023 00:08:57
+Botao Relatorios: 09/11/2023 00:08:59
+Botao Geral: 09/11/2023 00:09:02
+Check Box Base SIAG: 09/11/2023 00:09:04
+Abrindo planilha()
+pandas.read_excel("grupo.xlsx" , sheet_name="grupo")
+Grupos: 09/11/2023 00:09:06
+Grupo: ARTIGOS DE HIGIENE - 09/11/2023 00:09:08
+List Grupo - 09/11/2023 00:09:09
+send_keys: ARTIGOS DE HIGIENE - 09/11/2023 00:09:11
+Botao Pesquisar - 09/11/2023 00:09:12
+Aguardando retorno do click em Pesquisar - 09/11/2023 00:09:26
+Botao Gerar Planilha 001 - 09/11/2023 00:09:28
+Botao Gerar Planilha 002 - 09/11/2023 00:09:47
+================================ FIM ======================
