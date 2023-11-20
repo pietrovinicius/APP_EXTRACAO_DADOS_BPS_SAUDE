@@ -27,31 +27,28 @@ def print_pausa(texto , tempo):
     time.sleep(tempo)
 
 def renomear_ultimo_arquivo_download(nome_novo):
-  """
-  Renomeia o último arquivo inserido na pasta DOWNLOAD do Windows.
-
-  Args:
-    nome_novo: O novo nome do arquivo.
-
-  Returns:
-    None.
-  """
   # Obtém o caminho da pasta DOWNLOAD.
   caminho_pasta_download = os.path.join(os.path.expanduser("~"), "Downloads")
   print(f'Caminho da pasta download: {caminho_pasta_download}')
 
   # Obtém o nome do último arquivo inserido na pasta.
   arquivos_download = os.listdir(caminho_pasta_download)
-  ultimo_arquivo_download = arquivos_download[-1]
-  print(f'Ultimo arquivo download: {ultimo_arquivo_download}')
 
-  # Obtém a extensão do arquivo.
-  (nome_arquivo, extensao_arquivo) = os.path.splitext(ultimo_arquivo_download)
-
-  # Renomeia o arquivo.
-  os.rename(os.path.join(caminho_pasta_download, ultimo_arquivo_download),
-            os.path.join(caminho_pasta_download, nome_novo + extensao_arquivo))  
-  print(f'Renomeia o arquivo para: {nome_novo}')    
+  print("\n\nIterando arquivos da pasta download:")
+  contador = 0
+  for arquivo_download in arquivos_download:    
+    #print(f"arquivo_download: {arquivo_download}[{contador}]")
+    if arquivo_download == 'Geral_BPS.csv':
+        # Obtém a extensão do arquivo.
+        ultimo_arquivo_download = arquivos_download[contador]
+        (nome_arquivo, extensao_arquivo) = os.path.splitext(ultimo_arquivo_download)
+        # Renomeia o arquivo.
+        os.rename(os.path.join(caminho_pasta_download, ultimo_arquivo_download),
+                  os.path.join(caminho_pasta_download, nome_novo + extensao_arquivo))
+        print(f'\n############# Renomeiar o arquivo para: {nome_novo}\n')  
+    #else:
+        #print(f'Ultimo arquivo não foi renomeado, pois se chama: {arquivo_download}')
+    contador = contador + 1
 
 # Retira os acentos das vogais
 def remover_acentos(texto):
@@ -90,6 +87,22 @@ def remover_acentos(texto):
         texto = texto.replace(caractere_original, caractere_substituido)
     return texto
 
+def deletar_todos_arquivos_download():
+  """
+  Deleta todos os arquivos da pasta Download.
+
+  Returns:
+    None.
+  """
+  # Obtém o caminho da pasta Download.
+  caminho_pasta_download = os.path.join(os.path.expanduser("~"), "Downloads")
+
+  # Obtém os arquivos da pasta.
+  arquivos_download = os.listdir(caminho_pasta_download)
+
+  # Deleta os arquivos.
+  for arquivo_download in arquivos_download:
+    os.remove(os.path.join(caminho_pasta_download, arquivo_download))
 
 try:
     #se não existir o arquivo txt será criado
@@ -100,6 +113,11 @@ try:
     with open("log.txt" , "r+") as log:
         print("================================ INICIO ======================")
         log.write(f"\n{agora()}\n================================ INICIO ======================")  
+        
+        #Deletando todos os arquivos da pasta download:
+        #deletar_todos_arquivos_download()
+        #print_pausa('deletar_todos_arquivos_download();', 1)
+        #log.write('\ndeletar_todos_arquivos_download();')
 
         driver = webdriver.Chrome()
         #driver.get("https://2252tst1wecare.cloudmv.com.br/pronep")
@@ -194,7 +212,7 @@ try:
              renomear_ultimo_arquivo_download(nome_arquivo_temp)
              log.write(f'\nrenomear_ultimo_arquivo_download: {nome_arquivo_temp}')
 
-             print_pausa('Aguarde 15s...' , 15)
+             print_pausa('Aguarde 5s...' , 5)
 
 
         #TODO: EXTRAIR TODOS OS "Fornecido Por:"

@@ -1,84 +1,84 @@
 
-20/11/2023 18:43:37
+20/11/2023 19:50:05
 ================================ INICIO ======================
-Field txt e-mail: 20/11/2023 18:43:47
-Botao de Login send_keys("pietrovinicius@gmail.com"): 20/11/2023 18:43:49
-Botao Acessar ConsultaPublica de Login: 20/11/2023 18:43:54
-Botao Relatorios: 20/11/2023 18:43:56
-Botao Geral: 20/11/2023 18:43:58
-Check Box Base SIAG: 20/11/2023 18:44:01
+Field txt e-mail: 20/11/2023 19:50:14
+Botao de Login send_keys("pietrovinicius@gmail.com"): 20/11/2023 19:50:16
+Botao Acessar ConsultaPublica de Login: 20/11/2023 19:50:19
+Botao Relatorios: 20/11/2023 19:50:21
+Botao Geral: 20/11/2023 19:50:23
+Check Box Base SIAG: 20/11/2023 19:50:25
 Abrindo planilha()
 pandas.read_excel("grupo.xlsx" , sheet_name="grupo")
-Grupos: 20/11/2023 18:44:03
-Grupo: ARTIGOS DE HIGIENE - 20/11/2023 18:44:05
-List Grupo - 20/11/2023 18:44:06
-send_keys: ARTIGOS DE HIGIENE - 20/11/2023 18:44:07
-Botao Pesquisar - 20/11/2023 18:44:08
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:44:19
-Botao Gerar Planilha 001 - 20/11/2023 18:44:21
-Botao Gerar Planilha 002 - 20/11/2023 18:44:36
+Grupos: 20/11/2023 19:50:28
+Grupo: ARTIGOS DE HIGIENE - 20/11/2023 19:50:30
+List Grupo - 20/11/2023 19:50:31
+send_keys: ARTIGOS DE HIGIENE - 20/11/2023 19:50:32
+Botao Pesquisar - 20/11/2023 19:50:33
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:50:45
+Botao Gerar Planilha 001 - 20/11/2023 19:50:47
+Botao Gerar Planilha 002 - 20/11/2023 19:51:03
 Renomeando ultimo arquivo gerado...
 Limitando nome do grupo em 40 letras: ARTIGOS DE HIGIENE
-renomear_ultimo_arquivo_download: ARTIGOS DE HIGIENE 20_11_2023 18_44_40
-Grupo: DIVERSOS - 20/11/2023 18:44:56
-List Grupo - 20/11/2023 18:44:57
-send_keys: DIVERSOS - 20/11/2023 18:44:58
-Botao Pesquisar - 20/11/2023 18:44:59
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:45:06
-Botao Gerar Planilha 001 - 20/11/2023 18:45:08
-Botao Gerar Planilha 002 - 20/11/2023 18:45:10
+renomear_ultimo_arquivo_download: ARTIGOS DE HIGIENE 20_11_2023 19_51_09
+Grupo: DIVERSOS - 20/11/2023 19:51:15
+List Grupo - 20/11/2023 19:51:16
+send_keys: DIVERSOS - 20/11/2023 19:51:17
+Botao Pesquisar - 20/11/2023 19:51:18
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:51:25
+Botao Gerar Planilha 001 - 20/11/2023 19:51:27
+Botao Gerar Planilha 002 - 20/11/2023 19:51:30
 Renomeando ultimo arquivo gerado...
 Limitando nome do grupo em 40 letras: DIVERSOS
-renomear_ultimo_arquivo_download: DIVERSOS 20_11_2023 18_45_14
-Grupo: EQUIPAMENTOS E ARTIGOS PARA USO MÉDICO, DENTÁRIO E VETERINÁRIO - 20/11/2023 18:45:30
-List Grupo - 20/11/2023 18:45:31
-send_keys: EQUIPAMENTOS E ARTIGOS PARA USO MÉDICO, DENTÁRIO E VETERINÁRIO - 20/11/2023 18:45:33
-Botao Pesquisar - 20/11/2023 18:45:34
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:45:58
-Botao Gerar Planilha 001 - 20/11/2023 18:46:00
-Botao Gerar Planilha 002 - 20/11/2023 18:46:03
+renomear_ultimo_arquivo_download: DIVERSOS 20_11_2023 19_51_35
+Grupo: EQUIPAMENTOS E ARTIGOS PARA USO MÉDICO, DENTÁRIO E VETERINÁRIO - 20/11/2023 19:51:41
+List Grupo - 20/11/2023 19:51:42
+send_keys: EQUIPAMENTOS E ARTIGOS PARA USO MÉDICO, DENTÁRIO E VETERINÁRIO - 20/11/2023 19:51:43
+Botao Pesquisar - 20/11/2023 19:51:44
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:52:17
+Botao Gerar Planilha 001 - 20/11/2023 19:52:19
+Botao Gerar Planilha 002 - 20/11/2023 19:52:23
 Renomeando ultimo arquivo gerado...
 Limitando nome do grupo em 40 letras: EQUIPAMENTOS E ARTIGOS PARA USO MEDICO D
-renomear_ultimo_arquivo_download: EQUIPAMENTOS E ARTIGOS PARA USO MEDICO D 20_11_2023 18_46_08
-Grupo: INSTRUMENTOS E EQUIPAMENTOS DE LABORATÓRIO - 20/11/2023 18:46:24
-List Grupo - 20/11/2023 18:46:25
-send_keys: INSTRUMENTOS E EQUIPAMENTOS DE LABORATÓRIO - 20/11/2023 18:46:26
-Botao Pesquisar - 20/11/2023 18:46:27
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:46:40
-Botao Gerar Planilha 001 - 20/11/2023 18:46:42
-Botao Gerar Planilha 002 - 20/11/2023 18:47:59
+renomear_ultimo_arquivo_download: EQUIPAMENTOS E ARTIGOS PARA USO MEDICO D 20_11_2023 19_52_31
+Grupo: INSTRUMENTOS E EQUIPAMENTOS DE LABORATÓRIO - 20/11/2023 19:52:37
+List Grupo - 20/11/2023 19:52:38
+send_keys: INSTRUMENTOS E EQUIPAMENTOS DE LABORATÓRIO - 20/11/2023 19:52:39
+Botao Pesquisar - 20/11/2023 19:52:40
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:52:55
+Botao Gerar Planilha 001 - 20/11/2023 19:52:57
+Botao Gerar Planilha 002 - 20/11/2023 19:54:09
 Renomeando ultimo arquivo gerado...
 Limitando nome do grupo em 40 letras: INSTRUMENTOS E EQUIPAMENTOS DE LABORATOR
-renomear_ultimo_arquivo_download: INSTRUMENTOS E EQUIPAMENTOS DE LABORATOR 20_11_2023 18_48_05
-Grupo: MATERIAIS MANUFATURADOS, NÃO METÁLICOS - 20/11/2023 18:48:21
-List Grupo - 20/11/2023 18:24:59
-send_keys: MATERIAIS MANUFATURADOS, NÃO METÁLICOS - 20/11/2023 18:25:00
-Botao Pesquisar - 20/11/2023 18:25:01
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:25:08
-Botao Gerar Planilha 001 - 20/11/2023 18:25:10
-Botao Gerar Planilha 002 - 20/11/2023 18:25:12
+renomear_ultimo_arquivo_download: INSTRUMENTOS E EQUIPAMENTOS DE LABORATOR 20_11_2023 19_54_16
+Grupo: MATERIAIS MANUFATURADOS, NÃO METÁLICOS - 20/11/2023 19:54:22
+List Grupo - 20/11/2023 19:54:23
+send_keys: MATERIAIS MANUFATURADOS, NÃO METÁLICOS - 20/11/2023 19:54:24
+Botao Pesquisar - 20/11/2023 19:54:25
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:54:34
+Botao Gerar Planilha 001 - 20/11/2023 19:54:36
+Botao Gerar Planilha 002 - 20/11/2023 19:54:38
 Renomeando ultimo arquivo gerado...
-Limitando nome do grupo em 40 letras: MATERIAIS MANUFATURADOS, NÃO METÁLICOS
-renomear_ultimo_arquivo_download: MATERIAIS MANUFATURADOS, NÃO METÁLICOS 20_11_2023 18_25_16
-Grupo: SUBSISTÊNCIA - 20/11/2023 18:25:32
-List Grupo - 20/11/2023 18:25:33
-send_keys: SUBSISTÊNCIA - 20/11/2023 18:25:34
-Botao Pesquisar - 20/11/2023 18:25:35
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:25:54
-Botao Gerar Planilha 001 - 20/11/2023 18:25:56
-Botao Gerar Planilha 002 - 20/11/2023 18:26:41
+Limitando nome do grupo em 40 letras: MATERIAIS MANUFATURADOS NAO METALICOS
+renomear_ultimo_arquivo_download: MATERIAIS MANUFATURADOS NAO METALICOS 20_11_2023 19_54_44
+Grupo: SUBSISTÊNCIA - 20/11/2023 19:54:50
+List Grupo - 20/11/2023 19:54:51
+send_keys: SUBSISTÊNCIA - 20/11/2023 19:54:52
+Botao Pesquisar - 20/11/2023 19:54:53
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:55:20
+Botao Gerar Planilha 001 - 20/11/2023 19:55:22
+Botao Gerar Planilha 002 - 20/11/2023 19:56:04
 Renomeando ultimo arquivo gerado...
-Limitando nome do grupo em 40 letras: SUBSISTÊNCIA
-renomear_ultimo_arquivo_download: SUBSISTÊNCIA 20_11_2023 18_26_50
-Grupo: SUBSTÂNCIAS E PRODUTOS QUÍMICOS - 20/11/2023 18:27:06
-List Grupo - 20/11/2023 18:27:07
-send_keys: SUBSTÂNCIAS E PRODUTOS QUÍMICOS - 20/11/2023 18:27:09
-Botao Pesquisar - 20/11/2023 18:27:10
-Aguardando retorno do click em Pesquisar - 20/11/2023 18:27:22
-Botao Gerar Planilha 001 - 20/11/2023 18:27:24
-Botao Gerar Planilha 002 - 20/11/2023 18:28:03
+Limitando nome do grupo em 40 letras: SUBSISTENCIA
+renomear_ultimo_arquivo_download: SUBSISTENCIA 20_11_2023 19_56_13
+Grupo: SUBSTÂNCIAS E PRODUTOS QUÍMICOS - 20/11/2023 19:56:19
+List Grupo - 20/11/2023 19:56:20
+send_keys: SUBSTÂNCIAS E PRODUTOS QUÍMICOS - 20/11/2023 19:56:22
+Botao Pesquisar - 20/11/2023 19:56:23
+Aguardando retorno do click em Pesquisar - 20/11/2023 19:57:28
+Botao Gerar Planilha 001 - 20/11/2023 19:57:30
+Botao Gerar Planilha 002 - 20/11/2023 19:58:09
 Renomeando ultimo arquivo gerado...
-Limitando nome do grupo em 40 letras: SUBSTÂNCIAS E PRODUTOS QUÍMICOS
-renomear_ultimo_arquivo_download: SUBSTÂNCIAS E PRODUTOS QUÍMICOS 20_11_2023 18_28_08
-20/11/2023 18:28:28
-================================ FIM ======================
+Limitando nome do grupo em 40 letras: SUBSTANCIAS E PRODUTOS QUIMICOS
+renomear_ultimo_arquivo_download: SUBSTANCIAS E PRODUTOS QUIMICOS 20_11_2023 19_58_12
+20/11/2023 19:58:22
+================================ FIM ========================
