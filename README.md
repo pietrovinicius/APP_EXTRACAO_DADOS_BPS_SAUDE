@@ -13,8 +13,3 @@ openpyxl
 time
 os
 datetime
-
-
-pasta de download do chrome alterada para:
-C:\Pietro\Projetos\APP_EXTRACAO_BPS_SAUDE\APP_EXTRACAO_DADOS_BPS_SAUDE\gerados
-

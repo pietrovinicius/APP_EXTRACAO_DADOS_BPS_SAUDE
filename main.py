@@ -6,7 +6,6 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-#import openpyxl
 import time
 import pandas 
 import os
@@ -15,23 +14,92 @@ import datetime
 def agora():
     agora = datetime.datetime.now()
     agora = agora.strftime("%d/%m/%Y %H:%M:%S")
-    return str(agora)  
+    return str(agora)
+
+def agora_limpo():
+    agora_limpo = datetime.datetime.now()
+    agora_limpo = agora_limpo.strftime("%d/%m/%Y %H:%M:%S")    
+    agora_limpo = agora_limpo.replace(":", "_").replace("/", "_")
+    return str(agora_limpo) 
 
 def print_pausa(texto , tempo):
     print(f"{agora()} - {texto} - tempo de: {tempo}s...")
-    time.sleep(tempo)        
+    time.sleep(tempo)
+
+def renomear_ultimo_arquivo_download(nome_novo):
+  """
+  Renomeia o último arquivo inserido na pasta DOWNLOAD do Windows.
+
+  Args:
+    nome_novo: O novo nome do arquivo.
+
+  Returns:
+    None.
+  """
+  # Obtém o caminho da pasta DOWNLOAD.
+  caminho_pasta_download = os.path.join(os.path.expanduser("~"), "Downloads")
+  print(f'Caminho da pasta download: {caminho_pasta_download}')
+
+  # Obtém o nome do último arquivo inserido na pasta.
+  arquivos_download = os.listdir(caminho_pasta_download)
+  ultimo_arquivo_download = arquivos_download[-1]
+  print(f'Ultimo arquivo download: {ultimo_arquivo_download}')
+
+  # Obtém a extensão do arquivo.
+  (nome_arquivo, extensao_arquivo) = os.path.splitext(ultimo_arquivo_download)
+
+  # Renomeia o arquivo.
+  os.rename(os.path.join(caminho_pasta_download, ultimo_arquivo_download),
+            os.path.join(caminho_pasta_download, nome_novo + extensao_arquivo))  
+  print(f'Renomeia o arquivo para: {nome_novo}')    
+
+# Retira os acentos das vogais
+def remover_acentos(texto):
+    caracteres_a_substituir = {
+    "Á": "A",
+    "Â": "A",
+    "À": "A",
+    "Ã": "A",    
+    "É": "E",
+    "Ê": "E",
+    "Í": "I",
+    "Î": "I",
+    "Ó": "O",
+    "Ô": "O",
+    "Õ": "O",
+    "Ú": "U",
+    "Û": "U",
+    "Ü": "U",
+    "Ç": "C",
+    "#": "",
+    "*": "",
+    "!": "",
+    "@": "",
+    "#": "",
+    "$": "",
+    "%": "",
+    "&": "",
+    ",": "",
+    "/": "",
+    "_": "",
+    ":": ""
+    } 
+    for caractere_original, caractere_substituido in caracteres_a_substituir.items():
+        texto = texto.strip()
+        texto = texto.upper()
+        texto = texto.replace(caractere_original, caractere_substituido)
+    return texto
+
 
 try:
-    print("================================ INICIO ======================")
-
     #se não existir o arquivo txt será criado
     if not os.path.exists("log.txt"):
             with open("log.txt" , "r+") as log:
                 log.write("")
     #abrindo log txt para escrever o que ocorre nas etapas                        
     with open("log.txt" , "r+") as log:
-        log.write(f"\nLOG agora: {agora()}")            
-        print(f"LOG agora: {agora()}")    
+        print("================================ INICIO ======================")
+        log.write(f"\n{agora()}\n================================ INICIO ======================")  
 
         driver = webdriver.Chrome()
         #driver.get("https://2252tst1wecare.cloudmv.com.br/pronep")
@@ -72,10 +140,10 @@ try:
         log.write(f'\nAbrindo planilha()\npandas.read_excel("grupo.xlsx" , sheet_name="grupo")')
         #abrindo_planilha()
         grupos = pandas.read_excel("grupo.xlsx", sheet_name="grupo")
-        print_pausa(f"Grupos: {grupos}" , 1)
+        print_pausa(f"Grupos: {grupos}\n" , 1)
         log.write(f'\nGrupos: {agora()}')
         #lendo todas as linhas da coluna A
-        print_pausa("Bloco for\nSelecionando coluna 'GRUPOS:';" , 1)
+        print_pausa("Bloco for - Selecionando coluna 'GRUPOS:';" , 1)
         var_grupo = ""
         for dados in grupos.index:
              #valor obtido da coluna com a primeira linha 'GRUPOS:' 
@@ -103,6 +171,7 @@ try:
 
              #Botao de gerar planilha 001
              botao_gerar_plan001 = driver.find_element(By.XPATH, value='//*[@id="formItensBPS:j_id219"]/fieldset/div[2]/input')
+             #//*[@id="formItensBPS:j_id219"]/fieldset/div[2]/input
              print_pausa('Botao Gerar Planilha 001' , 2)
              log.write(f"\nBotao Gerar Planilha 001 - {agora()}")
              botao_gerar_plan001.click()
@@ -113,6 +182,19 @@ try:
              print_pausa('Botao Gerar Planilha 002' , 2)
              log.write(f"\nBotao Gerar Planilha 002 - {agora()}")
              botao_gerar_plan002.click()
+            
+             print_pausa('Renomeando ultimo arquivo gerado...' , 1)
+             log.write('\nRenomeando ultimo arquivo gerado...')
+             var_grupo = remover_acentos(var_grupo)
+             var_grupo = var_grupo[:40]
+             print_pausa(f'Limitando nome do grupo em 40 letras: {var_grupo}' , 1)
+             log.write(f'\nLimitando nome do grupo em 40 letras: {var_grupo}')
+
+             nome_arquivo_temp = var_grupo + ' ' + agora_limpo()
+             renomear_ultimo_arquivo_download(nome_arquivo_temp)
+             log.write(f'\nrenomear_ultimo_arquivo_download: {nome_arquivo_temp}')
+
+             print_pausa('Aguarde 15s...' , 15)
 
 
         #TODO: EXTRAIR TODOS OS "Fornecido Por:"
@@ -121,7 +203,7 @@ try:
 
         print_pausa('Pausa final' , 5)
         print("================================ FIM ======================")
-        log.write(f"\n================================ FIM ======================")
+        log.write(f"\n{agora()}\n================================ FIM ======================")
         #input()
 
 except KeyboardInterrupt as keyboard:
